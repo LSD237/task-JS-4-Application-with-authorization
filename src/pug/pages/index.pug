@@ -1,0 +1,40 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Modal window task'
+  - var pageClass = 'index-page'
+
+block content
+  #sidebar
+      .mui--text-white.mui--text-display1.mui--align-vertical Подкаст вопросы
+      br
+      small.author by nikita
+  #content.mui-container-fluid
+    .mui-row
+      .mui-col-sm-10.mui-col-sm-offset-1
+        br
+        br
+        .mui--text-black-54.mui--text-body2 Задай вопрос
+        .mui-divider
+        br
+        form#form.mui-form
+          .mui-textfield.mui-textfield--float-label
+            input#question-input(type='text' required minlength="10" maxlength="256")
+            label(for="question-input") Что хочешь спросить?
+          button#submit.mui-btn.mui-btn--raised.mui-btn--primary(type='submit' disabled) Задать вопрос
+
+        br
+        .mui--text-black-54.mui--text-body2 Ваши вопросы
+        .mui-divider
+        br
+        #list
+          .mui--text-headline
+            | MUI Acquires New Features
+            .mui--text-black-54
+              | By 
+              a(href='#') Team MUI
+              |  1 week ago
+            div
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis aliquam ipsum sed dignissim. Sed ac accumsan odio. Vivamus tristique dignissim neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc cursus felis nec purus condimentum vestibulum. Donec mauris nisi, sollicitudin eget iaculis id, suscipit id odio. 
+              a(href='#') Read more...
+            br
